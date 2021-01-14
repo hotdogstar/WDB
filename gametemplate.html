@@ -1,1 +1,51 @@
-<h1>Hello World!</h1>
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+
+    <script src="default.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <title>Mastermind - Cold War</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="rows">
+            <!-- the secret unknown message which is revealead at the end-->
+            <div class="code row">
+                <div class="secret socket">?</div>
+                <div class="secret socket">?</div>
+                <div class="secret socket">?</div>
+                <div class="secret socket">?</div>
+            </div>
+            <!-- two guesses allowed (for now).-->
+            <div class="guess">
+                <div class="socket"></div>
+                <div class="socket"></div>
+                <div class="socket"></div>
+                <div class="socket"></div>
+            </div>
+            <div class="guess">
+                <div class="socket"></div>
+                <div class="socket"></div>
+                <div class="socket"></div>
+                <div class="socket"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- List of color ball options to choose from-->
+    <div id="options" class="container">
+        <button value="1" id="green" class="choice green"></button>
+        <button value="2" id="purple" class="choice purple"></button>
+        <button value="3" id="red" class="choice red"></button>
+        <button value="4" id="yellow" class="choice yellow"></button>
+        <button value="5" id="blue" class="choice blue"></button>
+        <button value="6" id="brown" class="choice brown"></button>
+        <button id="delete" class="">&#8672;</button>
+    </div>
+
+</body>
+</html>
