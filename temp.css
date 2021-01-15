@@ -102,4 +102,16 @@ button {
 .colormatch{
     background: black;
 }
-  
+
+
+.redbox{
+    background-image: url(images/redbox.png);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.bluebox{
+    background-image: url(images/bluebox.png);
+}
