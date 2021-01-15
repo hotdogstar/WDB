@@ -69,7 +69,6 @@ function isCorrect(){
     //make a copy of the code + the guess
     codeCopy = code.slice(0);
     guessCopy = guess.slice(0);
-    alert(codeCopy[0]);
 
     //Check if position and color match 
     for(var i=0;i<code.length;i++){
