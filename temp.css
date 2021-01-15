@@ -11,6 +11,7 @@ body{
     position: relative;
     color: #fff;
     background-color: #eec39b;
+    font-family:Arial, Helvetica, sans-serif
 }
 .container {
     width: 400px;
