@@ -8,9 +8,16 @@
     <title>Mastermind - Cold War</title>
 </head>
 
-<body class="redbox">
-    <div class="container bluebox">
-        <h1>Mastermind - Cold War</h1>
+<body class="redbox main">
+<div class="ingamestats">
+    <button value="13" class="startbutton abort">ABORT GAME</button>
+    <h3>time passed: 0: 30</h3>
+    <h3>Your turn: yes</h3>
+    <h3>total guesses: 0</h3>
+
+</div>
+<div class="centerbox">
+    <div class="container">
         <div class="guesses">
             <!-- the secret code-->
             <div class="code row">
@@ -107,19 +114,20 @@
                 </div>
               </div>
         </div>
-    </div>
+    
 
     <!-- List of color ball options to choose from-->
-    <div id="options" class="container">
-        <button value="1" id="green" class="choice green"></button>
-        <button value="2" id="purple" class="choice purple"></button>
-        <button value="3" id="red" class="choice red"></button>
-        <button value="4" id="yellow" class="choice yellow"></button>
-        <button value="5" id="blue" class="choice blue"></button>
-        <button value="6" id="brown" class="choice brown"></button>
-        <button id="delete">&#8672;</button>
+        <div id="options" >
+            <button value="1" id="green" class="choice green"></button>
+            <button value="2" id="purple" class="choice purple"></button>
+            <button value="3" id="red" class="choice red"></button>
+            <button value="4" id="yellow" class="choice yellow"></button>
+            <button value="5" id="blue" class="choice blue"></button>
+            <button value="6" id="brown" class="choice brown"></button>
+            <button id="delete">&#8672;</button>
+        </div>
     </div>
-
+</div>
 </body>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="default.js"></script>
