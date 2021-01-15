@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
-
-    <script src="default.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" href="temp.css">
+    
+    
 
     <title>Mastermind - Cold War</title>
 </head>
 
 <body>
     <div class="container">
-        <div class="rows">
-            <!-- the secret unknown message which is revealead at the end-->
+        <div class="guesses">
+            <!-- the secret code-->
             <div class="code row">
                 <div class="secret socket">?</div>
                 <div class="secret socket">?</div>
@@ -34,6 +34,24 @@
                 <div class="socket"></div>
             </div>
         </div>
+        <div id="hints">
+            <div class="hint">
+              <div class="row">
+                <div class="hint-socket socket"></div>
+                <div class="hint-socket socket"></div>
+                <div class="hint-socket socket"></div>
+                <div class="hint-socket socket"></div>
+              </div>
+            </div>
+            <div class="hint">
+                <div class="row">
+                  <div class="hint-socket socket"></div>
+                  <div class="hint-socket socket"></div>
+                  <div class="hint-socket socket"></div>
+                  <div class="hint-socket socket"></div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- List of color ball options to choose from-->
@@ -44,8 +62,10 @@
         <button value="4" id="yellow" class="choice yellow"></button>
         <button value="5" id="blue" class="choice blue"></button>
         <button value="6" id="brown" class="choice brown"></button>
-        <button id="delete" class="">&#8672;</button>
+        <button id="delete">&#8672;</button>
     </div>
 
 </body>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="default.js"></script>
 </html>

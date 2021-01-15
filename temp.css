@@ -1,0 +1,92 @@
+.green { background: #b7ec16; }
+.red { background: #f33535; }
+.blue { background: #17c4db; }
+.yellow { background: #F8CA00; }
+.black { background: #191919; }
+.purple { background: #d83dd0; }
+.brown { background: #b98664; }
+.white { background: #fff; }
+body{
+    padding-top: 100px;
+    position: relative;
+    color: #fff;
+    background-color: #eec39b;
+}
+.container {
+    width: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+.guess{ 
+    margin-top: 15px;
+}
+
+/*Align guess box with hint box*/
+.guesses{
+    float: left;
+}
+#hints {
+    vertical-align: bottom;
+    display: inline-block;
+    padding: 20px 20px;
+    overflow: hidden;
+    /* ADJUST THIS TO ALIGN HINTS WITH SOCKETS */
+    padding-top: 85px;
+}
+.hint{
+    padding-bottom: 40px;
+}
+
+.secret {
+    color: #e3dcb5;
+    text-align: center;
+    line-height: 30px;
+    font-weight: 800;
+    font-size: 16px;
+}
+.hint .socket {
+    width: 15px;
+    height: 15px;  
+}
+.code {
+    border-bottom: 2px solid #d6561b;
+    padding-bottom: 15px;
+}
+/*Circle */
+.choice,
+.socket {
+    display: inline-block;
+    border-radius: 50%;  
+}
+.socket{
+    background-color: #beb2be;
+}
+.choice,
+.code .socket,
+.guess .socket {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+#options button + button {
+    margin-left: 10px;
+  }
+
+button {
+  border: none;
+  border-radius: 3px;
+  font-size: 1em;
+  font-weight: 800;
+  padding: 5px 10px;
+  color: #333;
+  background-color: rgb(216, 209, 209);
+  vertical-align: middle;
+}
+
+#delete {
+    font-size: 21px;
+    background-color: #dbd087;
+  }
+  
