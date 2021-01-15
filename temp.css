@@ -1,11 +1,11 @@
-.green { background: #b7ec16; }
-.red { background: #f33535; }
-.blue { background: #17c4db; }
-.yellow { background: #F8CA00; }
-.black { background: #191919; }
-.purple { background: #d83dd0; }
-.brown { background: #b98664; }
-.white { background: #fff; }
+.green { background: #b7ec16!important; }
+.red { background: #f33535!important; }
+.blue { background: #17c4db!important; }
+.yellow { background: #F8CA00!important; }
+.black { background: #191919!important; }
+.purple { background: #d83dd0!important; }
+.brown { background: #b98664!important; }
+.white { background: #fff!important; }
 body{
     padding-top: 100px;
     position: relative;
@@ -89,4 +89,16 @@ button {
     font-size: 21px;
     background-color: #dbd087;
   }
+.socket.peg {
+    -webkit-animation: bounceIn .4s;
+    -o-animation: bounceIn .4s;
+    animation: bounceIn .4s;
+}
+.positionmatch{
+    background:white;
+
+}
+.colormatch{
+    background: black;
+}
   

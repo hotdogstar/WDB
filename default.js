@@ -1,5 +1,11 @@
 (function(){
-var code = []
+var code = [];
+var guess = [];
+var inputRows = document.getElementsByClassName("guess");
+var hintRows = document.getElementsByClassName("hint");
+
+//The counter for amount of guesses entered. Goes up by 1 each time a guess is entered
+var rowIncrement = 1;
 
 var colors = {1:'green',2:'purple',3:'red',4:'yellow', 5:'blue', 6:'brown'}
 
@@ -11,9 +17,7 @@ var secretSockets = document.getElementsByClassName("secret socket");
 //Store all input slots into an array
 var inputSlots = document.getElementsByClassName("guess");
 
-//The counter for amount of guesses entered. Goes up by 1 each time a guess is entered
-var counter = 0;
-
+var countercorrect = 0;
 var guess = [];
 
 function startGame(){
@@ -24,25 +28,49 @@ function startGame(){
     for(var i=0; i<choices.length;i++){
         choices[i].addEventListener("click", enterGuess);
     }
-    alert("woop");
         
  }
 
-//After the entire code is submitted, enter it.
+//Submit a color and if 4 colors have been submitted, check if correct
 function enterGuess(){
-    alert("noob");
-    
     //color chosen = .this
-    thecolor = this;
+    chosencolor = this;
+
+    var slotstoenter = inputRows[inputRows.length-rowIncrement].getElementsByClassName("socket");
+
+    slotstoenter[guess.length].className = slotstoenter[guess.length].className + " choice  "+ chosencolor.id ;
+
+    guess.push(+(this.value));
+
+    if(guess.length==4){
+        if(isCorrect()){
+            gameOver();
+        }else{
+            rowIncrement += 1;
+        }
+    }
     
     
 }
 //Compare the guess to the secret code and see if a) it matches the color b) it is in the right place
 function isCorrect(){
+    //make a copy of the code + the guess
+    codeCopy = code.slice(0);
+    guessCopy = guess.slice(0);
+
+    guess = [];
+
+    return false;
+
 
 }
-//Enter one color ball into the code
-function insertColor(){
+//Enter the hint. Black = color match.  White = positionmatch
+function insertHint(matchtype){
+    var hintIncrement = rowIncrement - 1;
+    var hintsockets = hintRows[hintRows.length-hintIncrement].getElementsByClassName("hint-socket");
+
+    //We change the hint socket's class name so that it no longer includes "hint-socket" meaning that the most recent hintsocket is always the next
+    hintsockets[0].className='socket '+ matchtype;
 
 }
 
